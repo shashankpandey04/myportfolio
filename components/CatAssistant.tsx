@@ -30,7 +30,7 @@ export default function CatAssistant() {
 
     if (newCount === 6) {
       setMessage("fine...canon event it's!");
-    
+      playSound("/sounds/cannon_event.mp3");
       setTimeout(() => {
           window.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ", "_blank");
       }, 1200);
