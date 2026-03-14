@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { playSound } from "@/lib/soundPlayer";
 
 export default function CatAssistant() {
@@ -15,6 +15,24 @@ export default function CatAssistant() {
     "purr...",
     "you like cats huh?",
   ];
+
+  const exitRickroll = () => {
+    setRickroll(false);
+    setCanonEvent(false);
+    setMessage("lesson learned? don't pet random cats on the internet.");
+  };
+
+  // ESC key exit
+  useEffect(() => {
+    const handleKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        exitRickroll();
+      }
+    };
+
+    window.addEventListener("keydown", handleKey);
+    return () => window.removeEventListener("keydown", handleKey);
+  }, []);
 
   const handleClick = () => {
     const newCount = petCount + 1;
@@ -50,6 +68,10 @@ export default function CatAssistant() {
         setRickroll(true);
       }, 3500);
 
+      setTimeout(() => {
+        exitRickroll();
+      }, 15000);
+
       return;
     }
 
@@ -59,11 +81,10 @@ export default function CatAssistant() {
 
   return (
     <>
-      {/* Cat Assistant */}
       <div className="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-2">
 
         {message && (
-          <div className="bg-black/70 backdrop-blur-md px-3 py-1 rounded-lg text-xs text-white border border-white/10">
+          <div className="bg-black/70 backdrop-blur-md px-3 py-1 rounded-lg text-xs text-white border border-white/10 max-w-55 text-right">
             {message}
           </div>
         )}
@@ -81,7 +102,7 @@ export default function CatAssistant() {
 
       {/* Canon Event Overlay */}
       {canonEvent && !rickroll && (
-        <div className="fixed inset-0 z-[9998] flex items-center justify-center bg-black text-white animate-glitch">
+        <div className="fixed inset-0 z-9998 flex items-center justify-center bg-black text-white animate-glitch">
 
           <div className="text-center space-y-4">
             <div className="text-red-500 text-lg tracking-widest">
@@ -100,14 +121,21 @@ export default function CatAssistant() {
         </div>
       )}
 
-      {/* Rickroll */}
       {rickroll && (
-        <div className="fixed inset-0 z-[9999] bg-black flex items-center justify-center">
+        <div className="fixed inset-0 z9999 bg-black flex items-center justify-center">
+
+          <button
+            onClick={exitRickroll}
+            className="absolute top-6 right-6 z-10000 bg-black/70 text-white px-4 py-2 rounded-lg border border-white/20 hover:border-cyan-400"
+          >
+            Exit
+          </button>
 
           <iframe
             className="w-screen h-screen"
             src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&controls=0"
             allow="autoplay; fullscreen"
+            allowFullScreen
           />
 
         </div>
