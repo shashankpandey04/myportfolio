@@ -1,10 +1,9 @@
-import { Mail, Github, Linkedin } from "lucide-react";
+import { Mail, Github, Linkedin, Instagram } from "lucide-react";
 
 export default function ContactPage() {
   return (
     <main className="max-w-4xl mx-auto px-6 py-24">
 
-      {/* Header */}
       <div className="mb-16">
         <h1 className="text-4xl font-bold text-white">
           Contact
@@ -16,10 +15,8 @@ export default function ContactPage() {
         </p>
       </div>
 
-      {/* Contact Cards */}
-      <div className="grid md:grid-cols-3 gap-6">
+      <div className="grid md:grid-cols-3 lg:grid-cols-5 gap-6">
 
-        {/* Email */}
         <a
           href="mailto:contact.shashankpandey04@gmail.com"
           className="p-6 rounded-xl border border-white/10 bg-white/5 hover:border-cyan-400/40 transition group"
@@ -35,7 +32,6 @@ export default function ContactPage() {
           </p>
         </a>
 
-        {/* GitHub */}
         <a
           href="https://github.com/shashankpandey04"
           target="_blank"
@@ -52,9 +48,8 @@ export default function ContactPage() {
           </p>
         </a>
 
-        {/* LinkedIn */}
         <a
-          href="https://linkedin.com"
+          href="https://www.linkedin.com/in/shashankpandey04/"
           target="_blank"
           className="p-6 rounded-xl border border-white/10 bg-white/5 hover:border-cyan-400/40 transition group"
         >
@@ -66,6 +61,38 @@ export default function ContactPage() {
 
           <p className="mt-2 text-sm text-gray-400">
             Connect professionally
+          </p>
+        </a>
+
+        <a
+          href="https://instagram.com/codingnerd.py"
+          target="_blank"
+          className="p-6 rounded-xl border border-white/10 bg-white/5 hover:border-cyan-400/40 transition group"
+        >
+          <Instagram className="text-cyan-400" size={28} />
+
+          <h3 className="mt-4 text-lg font-semibold text-white">
+            Coding Nerd
+          </h3>
+
+          <p className="mt-2 text-sm text-gray-400">
+            Dev content, experiments & tech posts
+          </p>
+        </a>
+
+        <a
+          href="https://instagram.com/shashankpandey04"
+          target="_blank"
+          className="p-6 rounded-xl border border-white/10 bg-white/5 hover:border-cyan-400/40 transition group"
+        >
+          <Instagram className="text-cyan-400" size={28} />
+
+          <h3 className="mt-4 text-lg font-semibold text-white">
+            Instagram
+          </h3>
+
+          <p className="mt-2 text-sm text-gray-400">
+            Personal account & daily life
           </p>
         </a>
 
