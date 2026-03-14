@@ -28,6 +28,14 @@ export default function CatAssistant() {
       return;
     }
 
+    if (newCount === 4) {
+      setMessage("you're really persistent...");
+    }
+
+    if (newCount === 5) {
+      setMessage("there's always a `secret` page");
+    }
+
     if (newCount === 6) {
       setMessage("fine...canon event it's!");
       playSound("/sounds/cannon_event.mp3");

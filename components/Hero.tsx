@@ -9,19 +9,19 @@ import { useState } from "react";
 
 export default function Hero() {
   const [openResume, setOpenResume] = useState(false);
-    
+
   return (
-    <section className="min-h-screen flex items-center px-6">
+    <section className="min-h-screen flex items-center px-6 py-16 md:py-0">
 
-      <div className="max-w-6xl mx-auto w-full grid md:grid-cols-2 gap-16 items-center">
+      <div className="max-w-6xl mx-auto w-full grid md:grid-cols-2 gap-12 md:gap-16 items-center">
 
-        <div>
+        <div className="text-center md:text-left">
 
-          <h1 className="text-4xl md:text-5xl font-bold">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold">
             Hi, I'm <span className="text-cyan-400">Shashank Pandey</span>
           </h1>
 
-          <div className="mt-4 text-xl text-gray-300 h-8">
+          <div className="mt-4 text-lg sm:text-xl text-gray-300 h-8">
             <TypeAnimation
               sequence={[
                 "AWS Cloud Captain",
@@ -41,25 +41,25 @@ export default function Hero() {
             />
           </div>
 
-          <p className="mt-6 text-gray-400 max-w-lg leading-relaxed">
+          <p className="mt-6 text-gray-400 max-w-lg mx-auto md:mx-0 leading-relaxed">
             I build scalable systems, developer platforms, and cloud-powered
             applications using FastAPI, Next.js, Docker and modern infrastructure.
           </p>
 
-          <div className="mt-8 flex gap-4">
+          <div className="mt-8 flex flex-wrap justify-center md:justify-start gap-3 md:gap-4">
 
             <button
-                onClick={() => setOpenResume(true)}
-                className="px-6 py-3 rounded-full bg-cyan-400 text-black font-medium hover:bg-cyan-300 transition"
+              onClick={() => setOpenResume(true)}
+              className="px-5 py-2.5 md:px-6 md:py-3 rounded-full bg-cyan-400 text-black font-medium hover:bg-cyan-300 transition"
             >
-                View Resume
+              View Resume
             </button>
 
-      <ResumeViewer open={openResume} setOpen={setOpenResume} />
+            <ResumeViewer open={openResume} setOpen={setOpenResume} />
 
             <Link
               href="/contact"
-              className="px-6 py-3 rounded-full border border-white/20 hover:border-cyan-400 transition"
+              className="px-5 py-2.5 md:px-6 md:py-3 rounded-full border border-white/20 hover:border-cyan-400 transition"
             >
               Contact
             </Link>
@@ -67,7 +67,7 @@ export default function Hero() {
             <Link
               href="https://www.linkedin.com/in/shashankpandey04/"
               target="_blank"
-              className="p-3 rounded-full border border-white/20 hover:border-cyan-400 transition"
+              className="p-2.5 md:p-3 rounded-full border border-white/20 hover:border-cyan-400 transition"
             >
               <Linkedin className="w-5 h-5" />
             </Link>
@@ -75,48 +75,47 @@ export default function Hero() {
             <Link
               href="https://github.com/shashankpandey04"
               target="_blank"
-              className="p-3 rounded-full border border-white/20 hover:border-cyan-400 transition"
+              className="p-2.5 md:p-3 rounded-full border border-white/20 hover:border-cyan-400 transition"
             >
               <Github className="w-5 h-5" />
             </Link>
 
-
           </div>
-        <div className="mt-8">
+
+          <div className="mt-8 flex justify-center md:justify-start">
             <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full 
             bg-white/5 border border-white/10 backdrop-blur-sm
             text-sm text-gray-300 hover:border-cyan-400/40 transition">
 
-                <img
+              <img
                 src="/aws.png"
                 alt="AWS"
                 className="w-6 h-6 object-contain brightness-110"
-                />
+              />
 
-                <span className="font-medium">AWS Cloud Captain</span>
+              <span className="font-medium">AWS Cloud Captain</span>
 
             </div>
-        </div>
+          </div>
 
         </div>
 
         <div className="flex justify-center md:justify-end mt-12 md:mt-20">
-        <div className="relative w-75 md:w-82.5 lg:w-90 aspect-3/4">
+          <div className="relative w-56 sm:w-64 md:w-75 lg:w-90 aspect-3/4">
 
-            {/* glow */}
             <div className="absolute -inset-4 bg-cyan-500/20 blur-3xl rounded-3xl"></div>
 
             <div className="relative w-full h-full rounded-2xl overflow-hidden border border-white/10 backdrop-blur-xl">
-            <Image
+              <Image
                 src="/shashank.jpg"
                 alt="Shashank Pandey"
                 fill
                 className="object-cover object-[center_18%] rounded-2xl shadow-[0_20px_80px_rgba(0,255,255,0.15)]"
                 priority
-            />
+              />
             </div>
 
-        </div>
+          </div>
         </div>
 
       </div>

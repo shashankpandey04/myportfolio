@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://shashankpandey.dev"), // change if different
+  metadataBase: new URL("https://shashankpandey04.netlify.app"),
 
   title: {
     default: "Shashank Pandey | Backend Engineer",
@@ -35,12 +35,13 @@ export const metadata: Metadata = {
     "Software Engineer Portfolio",
     "System Design",
     "Cloud Developer",
+    "AWS Cloud Captain"
   ],
 
   authors: [
     {
       name: "Shashank Pandey",
-      url: "https://shashankpandey.dev",
+      url: "https://shashankpandey04.netlify.app",
     },
   ],
 
@@ -49,8 +50,8 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Shashank Pandey | Backend Engineer",
     description:
-      "Backend engineer building scalable platforms, cloud systems, and developer tools.",
-    url: "https://shashankpandey.dev",
+      "AWS Cloud Captain - Backend engineer building scalable platforms, cloud systems, and developer tools.",
+    url: "https://shashankpandey04.netlify.app",
     siteName: "Shashank Pandey Portfolio",
     images: [
       {
