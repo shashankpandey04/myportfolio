@@ -32,6 +32,8 @@ export default function Hero() {
                 2000,
                 "Python Developer",
                 2000,
+                "Technical Speaker",
+                2000,
               ]}
               speed={50}
               repeat={Infinity}
@@ -42,32 +44,34 @@ export default function Hero() {
           </div>
 
           <p className="mt-6 text-gray-400 max-w-lg mx-auto md:mx-0 leading-relaxed">
-            I build scalable systems, developer platforms, and cloud-powered
-            applications using FastAPI, Next.js, Docker and modern infrastructure.
+            I design and build scalable cloud systems, developer platforms, and real-world solutions used by growing communities - combining backend engineering with AWS infrastructure.
+          </p>
+          <p className="mt-4 text-gray-400 max-w-lg mx-auto md:mx-0 leading-relaxed">
+            Impacting 2500+ builders through AWS Cloud Club initiatives
           </p>
 
           <div className="mt-8 flex flex-wrap justify-center md:justify-start gap-3 md:gap-4">
 
+            <Link
+              href='/projects'
+              className="px-6 py-3 rounded-full bg-cyan-400 text-black font-semibold hover:bg-cyan-300 transition shadow-lg shadow-cyan-400/20"
+            >
+              View Projects
+            </Link>
+
             <button
               onClick={() => setOpenResume(true)}
-              className="px-5 py-2.5 md:px-6 md:py-3 rounded-full bg-cyan-400 text-black font-medium hover:bg-cyan-300 transition"
+              className="px-6 py-3 rounded-full border border-cyan-400 text-cyan-400 font-medium hover:bg-cyan-400 hover:text-black transition"
             >
-              View Resume
+              Resume
             </button>
 
             <ResumeViewer open={openResume} setOpen={setOpenResume} />
 
             <Link
-              href="/contact"
-              className="px-5 py-2.5 md:px-6 md:py-3 rounded-full border border-white/20 hover:border-cyan-400 transition"
-            >
-              Contact
-            </Link>
-
-            <Link
               href="https://www.linkedin.com/in/shashankpandey04/"
               target="_blank"
-              className="p-2.5 md:p-3 rounded-full border border-white/20 hover:border-cyan-400 transition"
+              className="p-3 rounded-full border border-white/20 hover:border-cyan-400 hover:scale-105 transition"
             >
               <Linkedin className="w-5 h-5" />
             </Link>
@@ -75,7 +79,7 @@ export default function Hero() {
             <Link
               href="https://github.com/shashankpandey04"
               target="_blank"
-              className="p-2.5 md:p-3 rounded-full border border-white/20 hover:border-cyan-400 transition"
+              className="p-3 rounded-full border border-white/20 hover:border-cyan-400 hover:scale-105 transition"
             >
               <Github className="w-5 h-5" />
             </Link>

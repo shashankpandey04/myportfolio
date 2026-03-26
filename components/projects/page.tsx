@@ -17,6 +17,17 @@ export default function ProjectsPage() {
 
       <div className="grid md:grid-cols-2 gap-10">
 
+       <ProjectCard
+          title="CYNI Discord Bot"
+          description="A scalable Discord automation platform with moderation tools, premium features, and a web dashboard for server management."
+          image="/projects/cyni.png"
+          tech={["Python","Discord.py","FastAPI","MongoDB","Redis","HTML","JavaScript"
+          ]}
+          projectLink="/projects/cyni"
+          liveLink="https://cyni.quprdigital.tk/"
+          githubLink="https://github.com/shashankpandey04/CYNI-v2"
+        />
+        
         <ProjectCard
           title="Campus Operations System"
           description="Platform for managing campus events, user registrations, attendance tracking, and certificate generation."
@@ -34,17 +45,6 @@ export default function ProjectsPage() {
           projectLink="/projects/qr-attendance"
           liveLink="https://demoattendance.awslpu.in"
           githubLink="https://github.com/shashankpandey04/attendance_demo"
-        />
-
-        <ProjectCard
-          title="CYNI Discord Bot"
-          description="A scalable Discord automation platform with moderation tools, premium features, and a web dashboard for server management."
-          image="/projects/cyni.png"
-          tech={["Python","Discord.py","FastAPI","MongoDB","Redis","HTML","JavaScript"
-          ]}
-          projectLink="/projects/cyni"
-          liveLink="https://cyni.quprdigital.tk/"
-          githubLink="https://github.com/shashankpandey04/CYNI-v2"
         />
 
       </div>
