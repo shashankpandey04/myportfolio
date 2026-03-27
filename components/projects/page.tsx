@@ -27,6 +27,14 @@ export default function ProjectsPage() {
           liveLink="https://cyni.quprdigital.tk/"
           githubLink="https://github.com/shashankpandey04/CYNI-v2"
         />
+
+        <ProjectCard
+          title="CodeEval – Coding Assessment Platform"
+          description="A secure online coding exam system with Judge0 integration, real-time code execution, and a custom browser environment for controlled assessments."
+          image="/projects/codeeval.png"
+          tech={["Next.js", "FastAPI", "Node.js", "Judge0"]}
+          projectLink="/projects/codeeval"
+        />
         
         <ProjectCard
           title="Campus Operations System"
@@ -73,6 +81,15 @@ export default function ProjectsPage() {
           liveLink="https://pasandida-aurat-birthday.netlify.app/"
           githubLink="https://github.com/shashankpandey04/pasandia-aurat-birthday"
           projectLink="/projects/birthday"
+        />
+
+        <ProjectCard
+          title="Rusk – Micro Web Framework (Rust)"
+          description="An experimental micro web framework in Rust with basic routing and template rendering, exploring low-level web framework design."
+          image="/projects/rusk.png"
+          projectLink="/projects/rusk"
+          tech={["Rust"]}
+          githubLink="https://github.com/shashankpandey04/Rusk"
         />
 
       </div>
