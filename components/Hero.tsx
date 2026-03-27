@@ -30,7 +30,7 @@ export default function Hero() {
                 2000,
                 "Backend Engineer",
                 2000,
-                "Python Developer",
+                "I yap about AWS ☁️",
                 2000,
                 "Technical Speaker",
                 2000,
@@ -42,12 +42,15 @@ export default function Hero() {
               wrapper="span"
             />
           </div>
+          <p className="mt-2 text-sm text-gray-500">
+            I yap about AWS more than I should… but I also build with it.
+          </p>
 
           <p className="mt-6 text-gray-400 max-w-lg mx-auto md:mx-0 leading-relaxed">
-            I design and build scalable cloud systems, developer platforms, and real-world solutions used by growing communities - combining backend engineering with AWS infrastructure.
+            I design and build scalable cloud-native systems and developer platforms on AWS, powering real-world applications and communities at scale.
           </p>
           <p className="mt-4 text-gray-400 max-w-lg mx-auto md:mx-0 leading-relaxed">
-            Impacting 2500+ builders through AWS Cloud Club initiatives
+              Impacting 2500+ builders through AWS Cloud Club initiatives
           </p>
 
           <div className="mt-8 flex flex-wrap justify-center md:justify-start gap-3 md:gap-4">
@@ -84,11 +87,18 @@ export default function Hero() {
               <Github className="w-5 h-5" />
             </Link>
 
+            <Link
+              href="/architecture"
+              className="mt-4 inline-block text-sm text-gray-500 hover:text-cyan-400 transition"
+            >
+              → Explore my system designs
+            </Link>
+
           </div>
 
           <div className="mt-8 flex justify-center md:justify-start">
             <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full 
-            bg-white/5 border border-white/10 backdrop-blur-sm
+            bg-yellow-400/10 border border-yellow-400/20 text-yellow-300 backdrop-blur-sm
             text-sm text-gray-300 hover:border-cyan-400/40 transition">
 
               <img

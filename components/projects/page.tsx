@@ -38,6 +38,24 @@ export default function ProjectsPage() {
         />
 
         <ProjectCard
+          title="EventEasy"
+          description="An all-in-one event management platform with QR attendance, automated certificates, ticketing, analytics, and networking."
+          image="/projects/eventeasy.png"
+          tech={["Next.js", "FastAPI", "PostgreSQL", "AWS", "Docker"]}
+          projectLink="/projects/eventeasy"
+          githubLink="https://github.com/shashankpandey04/EventEasy"
+        />
+
+        <ProjectCard
+          title="NutriTrack"
+          description="A fitness challenge platform with goal tracking, real-time progress monitoring, and reward-based engagement."
+          image="/projects/nutritrack.png"
+          tech={["HTML", "Tailwind CSS", "JavaScript", "PHP"]}
+          projectLink="/projects/nutritrack"
+          githubLink="https://github.com/shashankpandey04/NutriTrack"
+        />
+
+        <ProjectCard
           title="QR Attendance System"
           description="A contactless QR-based attendance system with check-in, break tracking, and analytics."
           image="/projects/qr-attendance.png"
@@ -45,6 +63,16 @@ export default function ProjectsPage() {
           projectLink="/projects/qr-attendance"
           liveLink="https://demoattendance.awslpu.in"
           githubLink="https://github.com/shashankpandey04/attendance_demo"
+        />
+
+        <ProjectCard
+          title="Interactive Birthday Experience"
+          description="A playful interactive web experience where a birthday message unfolds through animations - featuring an envelope interaction, sliding card reveal, and confetti celebration."
+          image="/projects/birthday.png"
+          tech={["Next.js", "Framer Motion", "Canvas Confetti"]}
+          liveLink="https://pasandida-aurat-birthday.netlify.app/"
+          githubLink="https://github.com/shashankpandey04/pasandia-aurat-birthday"
+          projectLink="/projects/birthday"
         />
 
       </div>

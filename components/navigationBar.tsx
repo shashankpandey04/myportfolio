@@ -10,6 +10,7 @@ const navItems = [
   { name: "Projects", href: "/projects" },
   { name: "Architecture", href: "/architecture" },
   { name: "Certifications", href: "/certifications" },
+  { name: "Community", href: "/community" },
   { name: "Blog", href: "/blog" },
   { name: "About", href: "/about" },
   { name: "Contact", href: "/contact" },
@@ -21,7 +22,6 @@ export default function Navbar() {
 
   return (
     <>
-      {/* Desktop Navbar */}
       <div className="fixed top-6 left-1/2 z-50 -translate-x-1/2 hidden md:block">
         <nav
           className="relative flex items-center gap-8 px-8 py-3 rounded-full

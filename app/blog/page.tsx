@@ -36,22 +36,6 @@ export default function BlogPage() {
             link="https://www.linkedin.com/pulse/fine-tuning-isnt-enough-anymore-amazon-nova-forge-changes-pandey-gnv6c/"
         />
 
-        <BlogCard
-            title="AWS Student Community Day Jalandhar — Planning, Execution & Learnings"
-            description="A behind-the-scenes breakdown of organizing the first AWS Student Community Day in Jalandhar, covering event planning, speaker coordination, community growth, and key learnings."
-            cover="/blogs/aws-scd-jalandhar.png"
-            platform="AWS Builder Center"
-            link="https://builder.aws.com/content/38s6BFOdJv9JNjSLLMxiggdcqVQ/aws-student-community-day-jalandhar-planning-execution-and-learnings-from-the-first-edition"
-        />
-
-        <BlogCard
-            title="AWS Cloud Clubs Don’t Just Teach Cloud — They Build Builders"
-            description="A reflection on how AWS Cloud Clubs help students move from curiosity to building real projects through community, hands-on learning, and consistent mentorship. Sharing my experience growing from attendee to AWS Cloud Captain and helping organize initiatives like AWS Student Community Day."
-            cover="/blogs/aws-cloud-clubs.png"
-            platform="LinkedIn"
-            link="https://www.linkedin.com/posts/shashankpandey04_awscloudclubs-awscloudclub-aws-activity-7418168378760015873-5Lu2/"
-        />
-
       </div>
 
     </main>
