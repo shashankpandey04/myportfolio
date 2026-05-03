@@ -21,6 +21,48 @@ export default function CommunityPage() {
 
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
 
+      <CommunityCard
+        title="AWS New Voices 2026 - Selected Speaker"
+        description="Selected for AWS New Voices 2026, a program focused on developing public speaking skills and empowering builders to share ideas, insights, and real-world experiences."
+        cover="/community/aws-new-voices.png"
+        event="AWS New Voices Program"
+        date="April 2026"
+        highlights={[
+          "Selected among competitive applicants",
+          "Developing public speaking & storytelling skills",
+          "Learning to communicate technical ideas effectively"
+        ]}
+        link="https://www.linkedin.com/posts/shashankpandey04_aws-awsnewvoices-publicspeaking-activity-7455092003710636032-14pH"
+      />
+
+      <CommunityCard
+        title="AWS Summit Bengaluru 2026 - Builder Experience"
+        description="Participated and contributed at AWS Summit Bengaluru, gaining first-hand exposure to real-world AI + cloud innovations and connecting with builders, developers, and industry leaders."
+        cover="/community/aws-summit-bengaluru-2026.png"
+        event="AWS Summit Bengaluru"
+        date="April 2026"
+        highlights={[
+          "Explored real-world AI agent use cases on AWS",
+          "Networked with developers & industry leaders",
+          "Gained behind-the-scenes event experience"
+        ]}
+        link="https://www.linkedin.com/posts/shashankpandey04_awssummit-aws-cloudcomputing-activity-7453768647115837440-qshs/"
+      />
+
+      <CommunityCard
+        title="AWS Student Builder Campus Leader - LPU"
+        description="Selected as AWS Student Builder Campus Leader, driving cloud adoption through hands-on learning, community initiatives, and real-world project building."
+        cover="/community/aws-sbcl.png"
+        event="AWS SBCL Program"
+        date="April 2026"
+        highlights={[
+          "Leading cloud learning initiatives on campus",
+          "Providing access to AWS resources & labs",
+          "Enabling students to build real-world projects"
+        ]}
+        link="https://www.linkedin.com/posts/shashankpandey04_awssbcl-ad-awsstudent-activity-7453288085477363712-x0ug/"
+      />
+
         <CommunityCard
           title="AWS @ Techkriti 2026 - IIT Kanpur"
           description="Spent an incredible few days with the AWS Community at Techkriti, connecting with passionate builders, engaging at the AWS booth, and exchanging ideas across diverse perspectives."

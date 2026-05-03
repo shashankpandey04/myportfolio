@@ -24,33 +24,30 @@ export default function Hero() {
           <div className="mt-4 text-lg sm:text-xl text-gray-300 h-8">
             <TypeAnimation
               sequence={[
-                "AWS Cloud Captain",
-                2000,
-                "Systems Builder",
-                2000,
                 "Backend Engineer",
                 2000,
-                "I yap about AWS ☁️",
+                "Cloud Systems Builder",
                 2000,
-                "Technical Speaker",
+                "AWS Student Builder Leader",
+                2000,
+                "AWS New Voices Speaker",
                 2000,
               ]}
               speed={50}
               repeat={Infinity}
-              className="text-cyan-400"
               deletionSpeed={70}
               wrapper="span"
+              className="text-cyan-400"
             />
           </div>
-          <p className="mt-2 text-sm text-gray-500">
-            I yap about AWS more than I should… but I also build with it.
-          </p>
 
           <p className="mt-6 text-gray-400 max-w-lg mx-auto md:mx-0 leading-relaxed">
-            I design and build scalable cloud-native systems and developer platforms on AWS, powering real-world applications and communities at scale.
+            I build scalable cloud-native systems and developer platforms on AWS, powering real-world applications and communities at scale.  
+            I’ve enabled 2,500+ builders through workshops, mentoring, and hands-on initiatives.
           </p>
-          <p className="mt-4 text-gray-400 max-w-lg mx-auto md:mx-0 leading-relaxed">
-              Impacting 2500+ builders through AWS Cloud Club initiatives
+
+          <p className="mt-4 text-sm text-gray-500">
+            Built systems serving 40k+ users
           </p>
 
           <div className="mt-8 flex flex-wrap justify-center md:justify-start gap-3 md:gap-4">
@@ -91,7 +88,7 @@ export default function Hero() {
               href="/architecture"
               className="mt-4 inline-block text-sm text-gray-500 hover:text-cyan-400 transition"
             >
-              → Explore my system designs
+              Explore System Architecture →
             </Link>
 
           </div>
@@ -99,7 +96,7 @@ export default function Hero() {
           <div className="mt-8 flex justify-center md:justify-start">
             <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full 
             bg-yellow-400/10 border border-yellow-400/20 text-yellow-300 backdrop-blur-sm
-            text-sm text-gray-300 hover:border-cyan-400/40 transition">
+            text-sm hover:border-cyan-400/40 transition">
 
               <img
                 src="/aws.png"
@@ -107,7 +104,9 @@ export default function Hero() {
                 className="w-6 h-6 object-contain brightness-110"
               />
 
-              <span className="font-medium">AWS Cloud Captain</span>
+              <span className="font-medium">
+                AWS Student Builder Leader • AWS New Voices Speaker
+              </span>
 
             </div>
           </div>
@@ -121,7 +120,7 @@ export default function Hero() {
 
             <div className="relative w-full h-full rounded-2xl overflow-hidden border border-white/10 backdrop-blur-xl">
               <Image
-                src="/shashank.jpg"
+                src="/shashank.png"
                 alt="Shashank Pandey"
                 fill
                 className="object-cover object-[center_18%] rounded-2xl shadow-[0_20px_80px_rgba(0,255,255,0.15)]"
