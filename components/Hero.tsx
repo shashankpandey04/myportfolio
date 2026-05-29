@@ -11,14 +11,18 @@ export default function Hero() {
   const [openResume, setOpenResume] = useState(false);
 
   return (
+    
     <section className="min-h-screen flex items-center px-6 py-16 md:py-0">
-
+      <span className="sr-only">
+        Official website of Shashank Pandey, Software Engineer,
+        AWS Community Leader and Founder.
+      </span>
       <div className="max-w-6xl mx-auto w-full grid md:grid-cols-2 gap-12 md:gap-16 items-center">
 
         <div className="text-center md:text-left">
 
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold">
-            Hi, I'm <span className="text-cyan-400">Shashank Pandey</span>
+            <span className="text-cyan-400">Shashank Pandey</span>
           </h1>
 
           <div className="mt-4 text-lg sm:text-xl text-gray-300 h-8">
@@ -28,7 +32,7 @@ export default function Hero() {
                 2000,
                 "Cloud Systems Builder",
                 2000,
-                "AWS Student Builder Leader",
+                "Full Stack Developer",
                 2000,
                 "AWS New Voices Speaker",
                 2000,
@@ -105,7 +109,7 @@ export default function Hero() {
               />
 
               <span className="font-medium">
-                AWS Student Builder Leader • AWS New Voices Speaker
+                40,000+ Users Served • Community Leader • AWS Speaker
               </span>
 
             </div>
@@ -121,7 +125,7 @@ export default function Hero() {
             <div className="relative w-full h-full rounded-2xl overflow-hidden border border-white/10 backdrop-blur-xl">
               <Image
                 src="/shashank.png"
-                alt="Shashank Pandey"
+                alt="Shashank Pandey - Software Engineer"
                 fill
                 className="object-cover object-[center_18%] rounded-2xl shadow-[0_20px_80px_rgba(0,255,255,0.15)]"
                 priority
@@ -132,7 +136,11 @@ export default function Hero() {
         </div>
 
       </div>
-
+      <p className="sr-only">
+        Shashank Pandey is a software engineer from India specializing
+        in backend development, cloud computing, FastAPI, Next.js,
+        system design, AWS, and developer platforms.
+      </p>
     </section>
   );
 }
