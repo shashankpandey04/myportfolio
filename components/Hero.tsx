@@ -101,13 +101,6 @@ export default function Hero() {
             <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full 
             bg-yellow-400/10 border border-yellow-400/20 text-yellow-300 backdrop-blur-sm
             text-sm hover:border-cyan-400/40 transition">
-
-              <img
-                src="/aws.png"
-                alt="AWS"
-                className="w-6 h-6 object-contain brightness-110"
-              />
-
               <span className="font-medium">
                 40,000+ Users Served • Community Leader • AWS Speaker
               </span>
