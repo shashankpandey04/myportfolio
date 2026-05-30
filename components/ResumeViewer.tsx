@@ -78,8 +78,8 @@ export default function ResumeViewer({ open, setOpen }: ResumeViewerProps) {
               {DocumentComponent && PageComponent ? (
                 <DocumentComponent
                 file="/cv/resume.pdf"
-                onLoadSuccess={({ numPages: totalPages }) => {
-                  setNumPages(totalPages);
+                onLoadSuccess={(pdf: { numPages: number }) => {
+                  setNumPages(pdf.numPages);
                 }}
                 loading={
                   <p className="py-10 text-center text-sm text-gray-300">
