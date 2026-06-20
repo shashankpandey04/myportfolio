@@ -1,7 +1,7 @@
 const experiences = [
   {
-    company: "AWS Student Builder Campus Leader",
-    role: "Campus Leader",
+    company: "Amazon Web Services",
+    role: "AWS Student Builder Campus Leader",
     period: "May 2026 – Jun 2026",
     description:
       "Selected by AWS and NEXT GEN TEAM to promote AWS Builder Center, drive student engagement, and connect peers with cloud learning opportunities.",
