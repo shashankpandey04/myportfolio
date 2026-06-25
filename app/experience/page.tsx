@@ -16,7 +16,7 @@ const experiences = [
 
   {
     company: "AWS Student Builder Group",
-    role: "AWS SBG Leader",
+    role: "AWS Student Builder Group Leader",
     period: "Feb 2025 – May 2026",
     description:
       "Led one of the largest AWS student communities at Lovely Professional University through workshops, mentorship, and large-scale technical events.",
@@ -46,7 +46,7 @@ const experiences = [
   {
     company: "Encrypt Edge",
     role: "Core Team Member",
-    period: "Nov 2025 – Present",
+    period: "Nov 2025 – Mar 2026",
     description:
       "Designed hands-on cybersecurity learning experiences through CTF challenges and vulnerable applications.",
     highlights: [
