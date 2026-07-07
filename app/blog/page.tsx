@@ -3,22 +3,23 @@ import BlogCard from "@/components/blog/BlogCard";
 export default function BlogPage() {
   return (
     <main className="max-w-6xl mx-auto px-6 py-24">
-
       <div className="mb-16">
-
-        <h1 className="text-4xl font-bold text-white">
-          Blog
-        </h1>
+        <h1 className="text-4xl font-bold text-white">Blog</h1>
 
         <p className="mt-4 text-gray-400 max-w-2xl">
-          Technical articles and engineering notes where I share
-          learnings about backend systems, cloud architecture,
-          and developer tooling.
+          Technical articles and engineering notes where I share learnings about
+          backend systems, cloud architecture, and developer tooling.
         </p>
-
       </div>
 
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+        <BlogCard
+          title="Why I Built a Serverless Certificate Generation System"
+          description="The story behind building a serverless, event-driven certificate generation system—from Gmail limitations and Cloudflare Workers constraints to a scalable architecture that could be operated on a student community budget."
+          cover="/blogs/serverless-certificate-system.png"
+          platform="DEV Community"
+          link="https://dev.to/shashankpandey04/why-i-built-a-serverless-certificate-generation-system-3bn4"
+        />
 
         <BlogCard
           title="Designing a Scalable Event Management Platform on AWS"
@@ -29,15 +30,13 @@ export default function BlogPage() {
         />
 
         <BlogCard
-            title="Fine-Tuning Isn’t Enough Anymore — Amazon Nova Forge Changes the Game"
-            description="An exploration of how Amazon Nova Forge enables deeper AI customization by allowing developers to intervene earlier in the training lifecycle instead of relying only on prompt engineering or late-stage fine-tuning."
-            cover="/blogs/amazon-nova.png"
-            platform="LinkedIn"
-            link="https://www.linkedin.com/pulse/fine-tuning-isnt-enough-anymore-amazon-nova-forge-changes-pandey-gnv6c/"
+          title="Fine-Tuning Isn’t Enough Anymore — Amazon Nova Forge Changes the Game"
+          description="An exploration of how Amazon Nova Forge enables deeper AI customization by allowing developers to intervene earlier in the training lifecycle instead of relying only on prompt engineering or late-stage fine-tuning."
+          cover="/blogs/amazon-nova.png"
+          platform="LinkedIn"
+          link="https://www.linkedin.com/pulse/fine-tuning-isnt-enough-anymore-amazon-nova-forge-changes-pandey-gnv6c/"
         />
-
       </div>
-
     </main>
   );
 }
