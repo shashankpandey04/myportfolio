@@ -15,7 +15,7 @@ export default function BlogPage() {
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
         <BlogCard
           title="Why I Built a Serverless Certificate Generation System"
-          description="The story behind building a serverless, event-driven certificate generation system—from Gmail limitations and Cloudflare Workers constraints to a scalable architecture that could be operated on a student community budget."
+          description="The story behind building a serverless, event-driven certificate generation system-from Gmail limitations and Cloudflare Workers constraints to a scalable architecture that could be operated on a student community budget."
           cover="/blogs/serverless-certificate-system.png"
           platform="DEV Community"
           link="https://dev.to/shashankpandey04/why-i-built-a-serverless-certificate-generation-system-3bn4"
