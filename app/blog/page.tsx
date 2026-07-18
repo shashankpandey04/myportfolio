@@ -13,15 +13,15 @@ export default function BlogPage() {
       </div>
 
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
-        <BlogCard
-          title="Designing a Cost-Effective Serverless Certificate Generation System on AWS"
-          description="How I used AWS Lambda and Amazon S3 to build a scalable certificate platform that minimizes storage costs while improving security."
-          cover="/blogs/cost-serverless_certificate_generation_system.png"
-          platform="DEV Community"
-          link="https://dev.to/shashankpandey04/designing-a-cost-effective-serverless-certificate-generation-system-on-aws-3ec4"
-        />
 
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+        <BlogCard
+            title="Designing a Cost-Effective Serverless Certificate Generation System on AWS"
+            description="How I used AWS Lambda and Amazon S3 to build a scalable certificate platform that minimizes storage costs while improving security."
+            cover="/blogs/cost-serverless_certificate_generation_system.png"
+            platform="DEV Community"
+            link="https://dev.to/shashankpandey04/designing-a-cost-effective-serverless-certificate-generation-system-on-aws-3ec4"
+          />
+
         <BlogCard
           title="Why I Built a Serverless Certificate Generation System"
           description="The story behind building a serverless, event-driven certificate generation system-from Gmail limitations and Cloudflare Workers constraints to a scalable architecture that could be operated on a student community budget."
