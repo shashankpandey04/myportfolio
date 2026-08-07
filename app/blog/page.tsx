@@ -17,7 +17,7 @@ export default function BlogPage() {
         <BlogCard
           title="Idempotency: The Bug You Don't Notice Until Production"
           description="What a real-world webhook failure taught me about retries, duplicate events, race conditions, and designing idempotent systems."
-          cover="/blogs/idempotency.png"
+          cover="/blogs/Idempotency-cover.png"
           platform="AWS Builder Center"
           link="https://builder.aws.com/content/3Ha5j6sGC9QBSCLWFtTSz8bQLS7/idempotency-the-bug-you-dont-notice-until-production"
         />
