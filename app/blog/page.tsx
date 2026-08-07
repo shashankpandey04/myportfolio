@@ -15,6 +15,14 @@ export default function BlogPage() {
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
 
         <BlogCard
+          title="Idempotency: The Bug You Don't Notice Until Production"
+          description="What a real-world webhook failure taught me about retries, duplicate events, race conditions, and designing idempotent systems."
+          cover="/blogs/idempotency.png"
+          platform="AWS Builder Center"
+          link="https://builder.aws.com/content/3Ha5j6sGC9QBSCLWFtTSz8bQLS7/idempotency-the-bug-you-dont-notice-until-production"
+        />
+
+        <BlogCard
             title="Designing a Cost-Effective Serverless Certificate Generation System on AWS"
             description="How I used AWS Lambda and Amazon S3 to build a scalable certificate platform that minimizes storage costs while improving security."
             cover="/blogs/cost-serverless_certificate_generation_system.png"
