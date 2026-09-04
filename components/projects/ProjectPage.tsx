@@ -14,6 +14,8 @@ interface ProjectPageProps {
   outcome: string;
   liveLink?: string;
   githubLink?: string;
+  ytLink?: string;
+  blogLink?: string;
 }
 
 export default function ProjectPage({
@@ -30,6 +32,8 @@ export default function ProjectPage({
   outcome,
   liveLink,
   githubLink,
+  ytLink,
+  blogLink
 }: ProjectPageProps) {
   return (
     <main className="max-w-4xl mx-auto px-6 py-24">
@@ -59,6 +63,26 @@ export default function ProjectPage({
             className="px-4 py-2 rounded-lg border border-white/10 text-gray-300 hover:border-cyan-400/40 transition"
           >
             GitHub
+          </a>
+        )}
+
+        {ytLink && (
+          <a
+            href={ytLink}
+            target="_blank"
+            className="px-4 py-2 rounded-lg border border-white/10 text-gray-300 hover:border-cyan-400/40 transition"
+          >
+            YouTube
+          </a>
+        )}
+
+        {blogLink && (
+          <a
+            href={blogLink}
+            target="_blank"
+            className="px-4 py-2 rounded-lg border border-white/10 text-gray-300 hover:border-cyan-400/40 transition"
+          >
+            Blog
           </a>
         )}
 

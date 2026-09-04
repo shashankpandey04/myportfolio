@@ -52,7 +52,7 @@ export default function CommunityPage() {
       <CommunityCard
         title="AWS Student Builder Campus Leader - LPU"
         description="Selected as AWS Student Builder Campus Leader, driving cloud adoption through hands-on learning, community initiatives, and real-world project building."
-        cover="/community/aws-sbcl.png"
+        cover="/community/awssbcl.png"
         event="AWS SBCL Program"
         date="April 2026"
         highlights={[
