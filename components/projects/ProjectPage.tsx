@@ -1,5 +1,6 @@
 import Image from "next/image";
 
+
 interface ProjectPageProps {
   title: string;
   description: string;
@@ -9,7 +10,12 @@ interface ProjectPageProps {
   problem: string;
   solution: string;
   features: string[];
-  architecture: string;
+
+  architecture: {
+    title: string;
+    description: string;
+  }[];
+
   challenges: string[];
   outcome: string;
   liveLink?: string;
@@ -17,6 +23,7 @@ interface ProjectPageProps {
   ytLink?: string;
   blogLink?: string;
 }
+
 
 export default function ProjectPage({
   title,
@@ -178,8 +185,30 @@ export default function ProjectPage({
             </ContentSection>
 
             <ContentSection id="architecture" title="Architecture">
-              {architecture}
+              <div className="mt-10 space-y-0 border-t border-white/10">
+                {architecture.map((item, index) => (
+                  <div
+                    key={item.title}
+                    className="grid sm:grid-cols-[70px_1fr] gap-5 sm:gap-8 border-b border-white/10 py-7"
+                  >
+                    <span className="text-sm text-cyan-400 font-mono">
+                      {String(index + 1).padStart(2, "0")}
+                    </span>
+
+                    <div>
+                      <h3 className="text-lg font-medium text-white">
+                        {item.title}
+                      </h3>
+
+                      <p className="mt-3 text-gray-400 leading-7">
+                        {item.description}
+                      </p>
+                    </div>
+                  </div>
+                ))}
+              </div>
             </ContentSection>
+
 
             <ContentSection id="challenges" title="Engineering Challenges">
               <div className="mt-8 space-y-8">

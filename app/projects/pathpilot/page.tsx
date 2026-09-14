@@ -63,21 +63,39 @@ The same agent orchestration is exposed through both a command-line interface an
         "Observable agent trace showing tool calls, arguments, results, and final responses"
       ]}
 
-      architecture="
-PathPilot AI is centered around an Azure AI Foundry agent that orchestrates Python-based tools and persistent memory.
+      architecture={[
+        {
+          title: "Presentation Layer",
+          description:
+            "The web application uses Flask as a thin presentation layer. The browser sends travel requests to the /api/chat endpoint, while Flask delegates the actual planning workflow to a shared agent execution flow rather than embedding route logic directly in the web layer.",
+        },
+        {
+          title: "Agent Orchestration",
+          description:
+            "An Azure AI Foundry agent acts as the central orchestration layer. It interprets the user's natural-language travel request, determines whether route planning or other operations are required, and decides when to invoke available tools.",
+        },
+        {
+          title: "Language Model",
+          description:
+            "GPT-5 Mini processes user goals and reasons over the information returned by tools. Rather than handling every operation directly, the model coordinates with external capabilities and uses their structured results to generate the final response.",
+        },
+        {
+          title: "Python Tool Layer",
+          description:
+            "Route planning capabilities are implemented as Python tools, including operations such as get_distance and order_stops. The agent invokes these tools when required, and their implementations execute the underlying logic before returning structured results.",
+        },
+        {
+          title: "Persistent Memory",
+          description:
+            "JSON-based persistent memory is loaded and updated throughout the workflow. Existing trip information and previously visited stops can therefore influence future route planning and responses.",
+        },
+        {
+          title: "Agent Execution Flow",
+          description:
+            "Flask loads the relevant memory and invokes the shared run_agent flow. The Azure AI Foundry client manages model interactions and tool calls, while the completed response and structured tool trace are returned to the web interface.",
+        },
+      ]}
 
-A user provides a natural-language travel request, which is interpreted by GPT-5 Mini. When route planning is required, the agent invokes tools such as get_distance and order_stops.
-
-The Python implementations execute those operations and return structured results to the model, which then generates the final response.
-
-Persistent JSON memory is loaded and updated throughout the workflow so existing trip information and visited stops can influence future planning.
-
-The web application is implemented as a thin Flask presentation layer. The browser sends requests to /api/chat, Flask loads memory and invokes the shared run_agent flow, the Azure AI Foundry client handles model-generated tool calls, and the resulting response and structured tool trace are returned to the UI.
-
-The overall flow is:
-
-User Goal → GPT-5 Mini → Tool Call → Python Tool Execution → Tool Result → GPT-5 Mini → Final Response.
-"
 
       challenges={[
         "Designing the system so the AI agent decides when route planning is actually required instead of simply following the user's destination order.",

@@ -73,19 +73,33 @@ export default function Page() {
         "Test OAuth client for validating the complete authentication flow",
       ]}
 
-      architecture="
-        AWS LPU SSO follows a modern web architecture built around Next.js and Supabase.
-
-        The frontend and server-side application logic are implemented using Next.js and TypeScript. Next.js handles the user interface, authentication flows, authorization endpoints, account dashboard, and developer documentation.
-
-        Supabase provides the underlying authentication and database infrastructure. User authentication is handled through Supabase Auth, while application-specific profile information is stored separately in the profiles database table.
-
-        The system separates authentication identity from public profile data. This allows the platform to preserve secure authentication data while maintaining additional information required by the AWS LPU ecosystem.
-
-        Connected applications interact with AWS LPU SSO through OAuth and OpenID Connect endpoints. Applications redirect users to the authorization endpoint, receive authorization codes through registered callback URLs, exchange those codes for tokens, and retrieve user information using authenticated requests.
-
-        The architecture also includes PKCE, authorization code validation, state validation, nonce validation, registered redirect URI verification, and role-based access checks.
-      "
+      architecture={[
+        {
+          title: "Application Layer",
+          description:
+            "AWS LPU SSO is built with Next.js and TypeScript, handling both the user-facing application and server-side platform logic. This includes authentication flows, authorization endpoints, the account dashboard, application management, and developer documentation.",
+        },
+        {
+          title: "Identity & Authentication",
+          description:
+            "Supabase Auth provides the underlying authentication infrastructure and manages user identity securely. The platform uses this layer to handle account authentication while keeping identity concerns separate from application-specific user data.",
+        },
+        {
+          title: "Profile & Application Data",
+          description:
+            "Application-specific profile information is stored separately from authentication identity. This separation allows the platform to preserve secure authentication data while maintaining additional user information required across the AWS LPU ecosystem.",
+        },
+        {
+          title: "OAuth & OpenID Connect",
+          description:
+            "Connected applications integrate with AWS LPU SSO through OAuth 2.0 and OpenID Connect flows. Applications redirect users to the authorization endpoint, receive authorization codes through registered callback URLs, exchange those codes for tokens, and retrieve authenticated user information.",
+        },
+        {
+          title: "Authorization & Security",
+          description:
+            "The authorization flow includes PKCE, authorization code validation, state validation, nonce validation, registered redirect URI verification, and role-based access checks to help secure application integrations and authentication requests.",
+        },
+      ]}
 
       challenges={[
         "Designing a secure OAuth 2.0 authorization flow while keeping the implementation suitable for applications in the AWS LPU ecosystem",

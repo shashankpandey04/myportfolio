@@ -138,7 +138,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="mt-28 grid lg:grid-cols-[0.8fr_1.2fr] gap-10 lg:gap-20 border-y border-white/[0.08] py-16">
+      <section className="mt-28 grid lg:grid-cols-[0.8fr_1.2fr] gap-10 lg:gap-20 border-y border-white/8 py-16">
         <div>
           <p className="text-sm text-cyan-400 mb-4">
             HOW I THINK
@@ -201,7 +201,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="mt-28 grid lg:grid-cols-[0.8fr_1.2fr] gap-10 lg:gap-20 border-t border-white/[0.08] pt-16">
+      <section className="mt-28 grid lg:grid-cols-[0.8fr_1.2fr] gap-10 lg:gap-20 border-t border-white/8 pt-16">
         <div>
           <p className="text-sm text-cyan-400 mb-4">
             FROM AN UNUSUAL PERSPECTIVE
@@ -261,7 +261,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="mt-28 rounded-2xl border border-white/[0.08] bg-white/[0.02] p-8 sm:p-12">
+      <section className="mt-28 rounded-2xl border border-white/8 bg-white/[0.02] p-8 sm:p-12">
         <p className="max-w-3xl text-xl sm:text-2xl leading-relaxed text-gray-300">
           I don&apos;t have everything figured out yet. But I&apos;m curious
           enough to keep digging, ambitious enough to take on problems that are

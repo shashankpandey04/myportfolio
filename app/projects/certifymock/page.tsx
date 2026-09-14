@@ -59,19 +59,38 @@ After submission, the attempt is evaluated against the configured scoring and pa
         "Architecture designed for future exam types and certification providers"
       ]}
 
-      architecture="
-CertifyMock is built as a full-stack Next.js application with PostgreSQL providing persistent storage for the examination system.
-
-The core data model separates exams, questions, question pools, attempts, submitted answers, scoring information, and certification results. This allows the same infrastructure to support different examinations without coupling the application to a single certification.
-
-A typical exam flow is:
-
-User → Exam Selection → Exam Configuration → Attempt Creation → Question Delivery → Answer Submission → Scoring → Passing Evaluation → Result → Certification Status
-
-During an attempt, the system maintains the state of the examination and the user's submitted answers. Once the attempt is completed, the scoring system evaluates the responses and determines whether the configured passing criteria have been met.
-
-The application is container-friendly and designed to run with PostgreSQL as its persistent database.
-"
+      architecture={[
+        {
+          title: "Application Layer",
+          description:
+            "CertifyMock is built as a full-stack Next.js application, providing both the user-facing examination experience and the application logic required to manage exams, attempts, scoring, and certification results.",
+        },
+        {
+          title: "Examination Engine",
+          description:
+            "The core examination system manages the complete exam lifecycle, from exam selection and configuration to attempt creation, question delivery, answer submission, scoring, and final result evaluation.",
+        },
+        {
+          title: "Exam Data Model",
+          description:
+            "The data model separates exams, questions, question pools, attempts, submitted answers, scoring information, and certification results. This allows the same infrastructure to support multiple certification ecosystems without coupling the platform to a single examination.",
+        },
+        {
+          title: "Attempt & Answer Management",
+          description:
+            "During an active examination, the system maintains the state of the attempt and tracks submitted answers throughout the session. This creates a clear separation between the exam configuration, the user's attempt, and the final evaluation.",
+        },
+        {
+          title: "Scoring & Evaluation",
+          description:
+            "Once an attempt is completed, the scoring system evaluates submitted responses and applies the configured passing criteria. The result determines the user's exam outcome and updates the corresponding certification status.",
+        },
+        {
+          title: "Persistent Storage & Deployment",
+          description:
+            "PostgreSQL provides persistent storage for the examination system and its relational data. The application is designed to run in containerized environments, allowing consistent deployment alongside its database infrastructure.",
+        },
+      ]}
 
       challenges={[
         "Designing a database model flexible enough to support multiple certification ecosystems rather than one fixed examination.",

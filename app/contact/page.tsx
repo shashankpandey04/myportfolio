@@ -122,7 +122,7 @@ export default function ContactPage() {
           </div>
         </div>
 
-        <div className="mt-8 divide-y divide-white/[0.08] border-y border-white/[0.08]">
+        <div className="mt-8 divide-y divide-white/8 border-y border-white/8">
           {contactLinks.map((link) => {
             const Icon = link.icon;
 
@@ -161,7 +161,7 @@ export default function ContactPage() {
         </div>
       </section>
 
-      <section className="mt-28 border-t border-white/[0.08] pt-12">
+      <section className="mt-28 border-t border-white/8 pt-12">
         <p className="max-w-2xl text-xl sm:text-2xl leading-relaxed text-gray-300">
           I&apos;m currently focused on growing as an engineer, building
           interesting systems, and finding opportunities where I can work on

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { ArrowUpRight, Github, Play } from "lucide-react";
 
 interface ProjectCardProps {
   title: string;
@@ -10,6 +11,7 @@ interface ProjectCardProps {
   liveLink?: string;
   githubLink?: string;
   ytLink?: string;
+  index?: number;
 }
 
 export default function ProjectCard({
@@ -20,79 +22,117 @@ export default function ProjectCard({
   projectLink,
   liveLink,
   githubLink,
-  ytLink
+  ytLink,
+  index,
 }: ProjectCardProps) {
   return (
-    <div className="group rounded-2xl overflow-hidden border border-white/10 bg-white/5 backdrop-blur-sm hover:border-cyan-400/40 transition">
+    <article className="group">
+      <div className="flex items-center gap-4 mb-5">
+        {index !== undefined && (
+          <span className="text-sm font-mono text-cyan-400">
+            {String(index + 1).padStart(2, "0")}
+          </span>
+        )}
 
-      <div className="relative h-48 w-full overflow-hidden">
+        <div className="h-px flex-1 bg-white/8" />
+      </div>
+
+      <Link
+        href={projectLink}
+        className="relative block aspect-16/10 overflow-hidden rounded-2xl border border-white/08 bg-white/3"
+      >
         <Image
           src={image}
           alt={title}
           fill
-          className="object-cover group-hover:scale-105 transition duration-500"
+          className="object-cover transition duration-700 ease-out group-hover:scale-[1.04]"
         />
-      </div>
 
-      <div className="p-6">
+        <div className="absolute inset-0 bg-linear-to-t from-black/30 via-transparent to-transparent opacity-60" />
 
-        <h3 className="text-xl font-semibold text-white">{title}</h3>
+        <div className="absolute top-5 right-5 flex items-center justify-center w-10 h-10 rounded-full border border-white/10 bg-black/30 backdrop-blur-md text-white opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition duration-300">
+          <ArrowUpRight size={18} />
+        </div>
+      </Link>
 
-        <p className="mt-3 text-gray-400 text-sm">
+      <div className="mt-6">
+        <Link
+          href={projectLink}
+          className="inline-block"
+        >
+          <h3 className="text-2xl font-semibold tracking-tight text-white group-hover:text-cyan-400 transition">
+            {title}
+          </h3>
+        </Link>
+
+        <p className="mt-3 text-sm leading-7 text-gray-400">
           {description}
         </p>
 
-        <div className="flex flex-wrap gap-2 mt-4 text-xs text-gray-400">
-          {tech.map((t, i) => (
-            <span key={i} className="px-2 py-1 bg-white/5 rounded">
-              {t}
-            </span>
+        <div className="flex flex-wrap items-center gap-x-3 gap-y-2 mt-5">
+          {tech.map((item, index) => (
+            <div
+              key={item}
+              className="flex items-center gap-3"
+            >
+              <span className="text-xs text-gray-500">
+                {item}
+              </span>
+
+              {index !== tech.length - 1 && (
+                <span className="w-1 h-1 rounded-full bg-gray-700" />
+              )}
+            </div>
           ))}
         </div>
 
-        <div className="flex flex-wrap gap-3 mt-6 text-sm">
-
+        <div className="flex items-center justify-between gap-4 mt-7 pt-5 border-t border-white/8">
           <Link
             href={projectLink}
-            className="px-4 py-2 rounded-lg bg-cyan-500 text-black font-medium hover:bg-cyan-400 transition"
+            className="inline-flex items-center gap-2 text-sm font-medium text-white hover:text-cyan-400 transition"
           >
-            View Details
+            View case study
+            <ArrowUpRight size={16} />
           </Link>
 
-          {liveLink && (
-            <a
-              href={liveLink}
-              target="_blank"
-              className="px-4 py-2 rounded-lg border border-white/10 text-gray-300 hover:border-cyan-400/40 hover:text-white transition"
-            >
-              Live
-            </a>
-          )}
+          <div className="flex items-center gap-4">
+            {liveLink && (
+              <a
+                href={liveLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm text-gray-500 hover:text-white transition"
+              >
+                Live
+              </a>
+            )}
 
-          {githubLink && (
-            <a
-              href={githubLink}
-              target="_blank"
-              className="px-4 py-2 rounded-lg border border-white/10 text-gray-300 hover:border-cyan-400/40 hover:text-white transition"
-            >
-              GitHub
-            </a>
-          )}
+            {githubLink && (
+              <a
+                href={githubLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-1.5 text-sm text-gray-500 hover:text-white transition"
+              >
+                <Github size={15} />
+                Code
+              </a>
+            )}
 
-          {ytLink && (
-            <a
-              href={ytLink}
-              target="_blank"
-              className="px-4 py-2 rounded-lg border border-white/10 text-gray-300 hover:border-cyan-400/40 hover:text-white transition"
-            >
-              YouTube
-            </a>
-          )}
-
+            {ytLink && (
+              <a
+                href={ytLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-1.5 text-sm text-gray-500 hover:text-white transition"
+              >
+                <Play size={15} />
+                Demo
+              </a>
+            )}
+          </div>
         </div>
-
       </div>
-
-    </div>
+    </article>
   );
 }

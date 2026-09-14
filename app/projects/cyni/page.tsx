@@ -62,17 +62,43 @@ Through automation and structured moderation systems, CYNI helps reduce manual m
         "Integrated web dashboard for server management and configuration"
       ]}
 
-      architecture="
-The system is built using a modular architecture combining a Discord bot backend and a web dashboard interface.
-
-The core bot logic is written in Python using the Discord.py framework, which handles event listeners, command processing, and moderation automation. 
-The backend services interact with a MongoDB database to store server data such as user infractions, moderation logs, and configuration settings.
-
-A web dashboard provides administrators with an interface for managing bot settings and server operations outside of Discord. 
-The system also uses Redis for caching frequently accessed data to improve performance.
-
-This architecture allows CYNI to scale across multiple servers while maintaining reliable performance and efficient data management.
-"
+      architecture={[
+        {
+          title: "Discord Application Layer",
+          description:
+            "CYNI's primary runtime is a Python application built with Discord.py. It handles Discord gateway events, command processing, interactions, moderation actions, server events, and the real-time automation workflows that form the core of the platform.",
+        },
+        {
+          title: "Command & Automation System",
+          description:
+            "The platform organizes server functionality around modular commands and automation features, allowing moderation, management, and other server operations to be handled independently while sharing common application services and configuration.",
+        },
+        {
+          title: "Background Processing",
+          description:
+            "Background tasks handle operations that should not depend on a single user interaction or command execution. This allows CYNI to manage scheduled workflows, persistent automation, and longer-running server operations without blocking the main Discord event loop.",
+        },
+        {
+          title: "Persistent Data Layer",
+          description:
+            "MongoDB stores persistent server data including configuration, moderation records, user-related data, and feature-specific application state. The document-oriented model allows different CYNI features to maintain flexible data structures while remaining tied to individual Discord servers.",
+        },
+        {
+          title: "Caching & Runtime State",
+          description:
+            "Redis is used to cache frequently accessed information and manage temporary runtime state. This reduces unnecessary database operations and helps the application respond efficiently across multiple servers and active features.",
+        },
+        {
+          title: "Web Dashboard",
+          description:
+            "A dedicated web dashboard extends CYNI beyond Discord itself, giving server administrators a browser-based interface for managing settings, configurations, and platform functionality without relying entirely on Discord commands.",
+        },
+        {
+          title: "Platform Architecture",
+          description:
+            "The combination of a real-time Discord application, persistent data services, caching, background processing, and a separate management interface allows CYNI to operate as a broader server automation platform rather than simply a collection of Discord bot commands.",
+        },
+      ]}
 
       challenges={[
         "Managing Discord API rate limits while handling frequent command usage and moderation events across multiple guilds.",

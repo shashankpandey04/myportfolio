@@ -58,19 +58,38 @@ Community managers can then review escalations, reply directly from the dashboar
         "Persistent escalation history and conversation context stored in MongoDB"
       ]}
 
-      architecture="
-The platform is split into a Discord-facing interaction layer, an AI and knowledge layer, a FastAPI backend, persistent MongoDB storage, and a Next.js operational dashboard.
-
-The Discord bot is organized into independent Cogs for question answering, feedback, escalations, API integration, and contributor functionality. A shared Sarvam service handles AI interactions rather than creating separate clients for each component.
-
-FastAPI exposes REST endpoints for analytics, contributors, knowledge, documents, feedback, interactions, support, STT, and TTS.
-
-MongoDB stores community memory and structured operational data. The Next.js dashboard consumes these APIs and provides the community team with interfaces for analytics, knowledge, documents, feedback, contributors, and escalations.
-
-For unresolved questions, the flow is:
-
-Discord question → knowledge search → fallback/warning → escalation creation → Discord thread → MongoDB → dashboard → manager response → Discord thread → stored conversation history.
-"
+      architecture={[
+        {
+          title: "Discord Interaction Layer",
+          description:
+            "The Discord bot acts as the primary community-facing interface and is organized into independent Cogs for question answering, feedback, escalations, API integration, and contributor functionality. This keeps individual workflows modular while allowing them to operate as part of a shared community platform.",
+        },
+        {
+          title: "AI & Knowledge Layer",
+          description:
+            "A shared Sarvam service centralizes AI interactions instead of creating separate model clients across different components. Community questions are processed through the knowledge layer, allowing the system to search available information before determining whether a response can be generated automatically.",
+        },
+        {
+          title: "Operational API Layer",
+          description:
+            "FastAPI provides the backend service layer and exposes REST APIs for analytics, contributors, knowledge, documents, feedback, interactions, support, speech-to-text, and text-to-speech functionality.",
+        },
+        {
+          title: "Community Memory & Data",
+          description:
+            "MongoDB stores community knowledge, conversation history, feedback, escalations, contributor information, and other structured operational data. This gives different parts of the platform access to a shared source of community context.",
+        },
+        {
+          title: "Operations Dashboard",
+          description:
+            "A Next.js dashboard consumes the FastAPI APIs and gives the community team a dedicated operational interface for analytics, knowledge management, documents, feedback, contributors, and unresolved escalations.",
+        },
+        {
+          title: "Human Escalation Workflow",
+          description:
+            "When the AI cannot confidently resolve a community question, the request moves through a human-in-the-loop escalation workflow. A Discord question is checked against the knowledge layer, unresolved requests create an escalation and Discord thread, the case is stored in MongoDB and surfaced in the dashboard, and a manager response is sent back to the original Discord conversation while preserving the interaction history.",
+        },
+      ]}
 
       challenges={[
         "Designing an AI support workflow that does not blindly hallucinate when the available community knowledge is insufficient.",

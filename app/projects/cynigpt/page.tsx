@@ -55,25 +55,44 @@ The project also includes a complete training pipeline with checkpointing and co
         "Trainable model rather than a pre-trained model integration"
       ]}
 
-      architecture="
-CyniGPT follows the standard flow of a decoder-only autoregressive language model while implementing the major components directly in PyTorch.
+      architecture={[
+        {
+          title: "Tokenization Pipeline",
+          description:
+            "The training corpus is processed using a custom SentencePiece tokenizer, converting raw text into token sequences that can be consumed by the model. The tokenizer is also used during generation to convert prompts into tokens and decode generated tokens back into text.",
+        },
+        {
+          title: "Decoder-Only Transformer",
+          description:
+            "The core model is implemented directly in PyTorch using a decoder-only Transformer architecture. Token representations pass through stacked Transformer layers to learn contextual relationships and generate predictions.",
+        },
+        {
+          title: "Multi-Head Self-Attention",
+          description:
+            "Multi-head self-attention allows the model to learn relationships between different positions in a sequence. Causal masking prevents each position from attending to future tokens, preserving the autoregressive nature of language generation.",
+        },
+        {
+          title: "Training Pipeline",
+          description:
+            "During training, token sequences are passed through the Transformer to predict the next token in the sequence. The model learns by comparing predictions against target tokens and updating its parameters over repeated training steps.",
+        },
+        {
+          title: "Checkpointing",
+          description:
+            "Training checkpoints preserve the model state and training progress, allowing experiments to be resumed and model versions to be retained throughout the training process.",
+        },
+        {
+          title: "Autoregressive Generation",
+          description:
+            "During inference, a prompt is tokenized and passed through the Transformer to predict the next token. The generated token is added back to the context and the process repeats until the desired output is produced.",
+        },
+        {
+          title: "Sampling Strategy",
+          description:
+            "Configurable sampling controls how the next token is selected from the model's predicted probability distribution, allowing generation behaviour to be adjusted between more deterministic and more diverse outputs.",
+        },
+      ]}
 
-The training corpus is first processed through the SentencePiece tokenizer to produce token sequences.
-
-These tokens are passed into the Transformer model, where multi-head self-attention allows the model to learn relationships between tokens while causal masking prevents positions from attending to future tokens.
-
-The resulting representations are used for next-token prediction during training.
-
-During generation, the model predicts tokens autoregressively, feeding generated context back into the model to produce subsequent tokens. Configurable sampling controls how the model selects the next token.
-
-The overall workflow is:
-
-Training Corpus → SentencePiece Tokenizer → Token Sequences → Decoder Transformer → Causal Self-Attention → Next-Token Prediction → Checkpoint
-
-For generation:
-
-Prompt → Tokenization → Transformer → Next Token → Updated Context → Transformer → Generated Text
-"
 
       challenges={[
         "Understanding and implementing the core Transformer architecture rather than relying on pre-built model implementations.",

@@ -56,19 +56,33 @@ export default function Page() {
         "Administrative dashboard for managing event operations and monitoring participation"
       ]}
 
-      architecture="
-        The system follows a modern full-stack architecture.
-
-        The frontend is built using Next.js, providing a responsive interface for both students and administrators. 
-        The backend is implemented using FastAPI, exposing REST APIs for authentication, event management, 
-        attendance tracking, and certificate generation.
-
-        All application data such as user profiles, event registrations, attendance records, and certificate metadata 
-        are stored in a PostgreSQL database. Redis is used to handle caching and improve performance for frequently 
-        accessed data.
-
-        The application is containerized using Docker, allowing consistent development environments and simplifying deployment.
-      "
+      architecture={[
+        {
+          title: "Frontend",
+          description:
+            "Built with Next.js, the frontend provides a responsive interface for both students and administrators. It handles event discovery, registrations, attendance workflows, administrative operations, and certificate access.",
+        },
+        {
+          title: "Backend API",
+          description:
+            "FastAPI powers the backend and exposes REST APIs for authentication, event management, registrations, attendance tracking, certificate generation, and other platform workflows.",
+        },
+        {
+          title: "Data Layer",
+          description:
+            "PostgreSQL stores core application data including user profiles, event registrations, attendance records, event information, and certificate metadata.",
+        },
+        {
+          title: "Caching",
+          description:
+            "Redis is used for caching frequently accessed data, helping reduce unnecessary database queries and improve application performance.",
+        },
+        {
+          title: "Infrastructure",
+          description:
+            "The application is containerized with Docker, providing consistent development environments and simplifying deployment across different environments.",
+        },
+      ]}
 
       challenges={[
         "Handling concurrent user registrations while enforcing event registration limits",
