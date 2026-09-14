@@ -14,8 +14,7 @@ const navItems = [
   { name: "Blog", href: "/blog" },
   { name: "Certifications", href: "/certifications" },
   { name: "About", href: "/about" },
-  { name: "Contact", href: "/contact" },
-  { name: "Calendar", href: "/calendar" }
+  { name: "Contact", href: "/contact" }
 ];
 
 export default function Navbar() {

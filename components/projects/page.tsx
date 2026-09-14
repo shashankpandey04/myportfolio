@@ -18,6 +18,22 @@ export default function ProjectsPage() {
       <div className="grid md:grid-cols-2 gap-10">
 
         <ProjectCard
+          title="AWS LPU SSO - Identity Platform"
+          description="A centralized identity platform providing secure Single Sign-On across the AWS LPU ecosystem using OAuth 2.0 and OpenID Connect, with PKCE support, application authorization, user profiles, role management, and developer integration tools."
+          image="/projects/awslpusso.png"
+          tech={[
+            "Next.js",
+            "Supabase",
+            "OAuth 2.0",
+            "OpenID Connect",
+            "TypeScript",
+          ]}
+          projectLink="/projects/awslpusso"
+          githubLink="https://github.com/awsbuilderslpu/SSO"
+          liveLink="https://sso.awslpu.in/"
+        />
+
+        <ProjectCard
           title="CyniGPT – Language Model from Scratch"
           description="A decoder-only Transformer language model built from scratch in PyTorch, featuring a custom SentencePiece tokenizer, multi-head self-attention, causal masking, autoregressive text generation, configurable sampling, and a complete training pipeline with checkpointing."
           image="/projects/cynigpt.png"
